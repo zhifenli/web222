@@ -477,7 +477,23 @@ function toProvince(postalCode, useLongForm) {
  ******************************************************************************/
 
 function normalizeCoord(value) {
-    // Replace this comment with your code...
+    let lat, lon;
+    if (value[0] == "[") {
+        [lon, lat] = value.substring(1, value.length-1).split(",");
+    } else {
+        [lat, lon] = value.split(" ");
+    }
+
+    lat = Number(lat);
+    result = `(${lat}, ${lon})`;
+    if(-90 > lat || lat > 90){
+        throw new Error();
+    }
+    if(lon < -180 || lon > 180){
+        throw new Error();
+    }
+
+    return result;
 }
 
 /*******************************************************************************
