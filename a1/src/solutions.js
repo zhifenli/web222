@@ -109,7 +109,7 @@
  ******************************************************************************/
 
 function greeting(name) {
-  return `Hello ${name}`;
+    return `Hello ${name}!`;
 }
 
 /*******************************************************************************
@@ -142,7 +142,13 @@ function greeting(name) {
  ******************************************************************************/
 
 function cleanUp(value) {
-  // Replace this comment with your code...
+    let string = value.toString();
+    string = string.replace(/\s+/g, " ");
+    string = string.replaceAll("\"", "'");
+    string = string.replaceAll("( ", "(");
+    string = string.replaceAll(" )", ")");
+
+    return string;
 }
 
 /*******************************************************************************
@@ -191,7 +197,7 @@ function cleanUp(value) {
  ******************************************************************************/
 
 function createVideo(src, loop, muted) {
-  // Replace this comment with your code...
+
 }
 
 /*******************************************************************************
@@ -236,7 +242,30 @@ function createVideo(src, loop, muted) {
  ******************************************************************************/
 
 function fixPostalCode(postalCode) {
-  // Replace this comment with your code...
+    let result = postalCode.replaceAll(/\s/g, "");
+    result = result.replaceAll("-", "");
+    result = (result.substring(0, 3)) + " " + (result.substring(3));
+    result = result.toUpperCase();
+    if (result.length != 7) {
+        throw new Error;
+    }
+    const badFirstLetters = ["D", "F", "I", "O", "Q", "W", "U", "Z"];
+    const badThirdLetters = "DFIOQU";
+    const badSixthLetters = "DFIOQU";
+    if (badFirstLetters.includes(result.charAt(0))) {
+        throw new Error();
+    }
+    if (badThirdLetters.includes(result.charAt(2))) {
+        throw new Error();
+    }
+    if (badSixthLetters.includes(result.charAt(5))) {
+        throw new Error();
+    }
+    if (!/[A-Z]\d[A-Z]\s\d[A-Z]\d/.test(result)) {
+        throw new Error();
+    }
+    return result;
+
 }
 
 /*******************************************************************************
@@ -281,7 +310,7 @@ function fixPostalCode(postalCode) {
  ******************************************************************************/
 
 function toProvince(postalCode, useLongForm) {
-  // Replace this comment with your code...
+    // Replace this comment with your code...
 }
 
 /*******************************************************************************
@@ -311,7 +340,7 @@ function toProvince(postalCode, useLongForm) {
  ******************************************************************************/
 
 function normalizeCoord(value) {
-  // Replace this comment with your code...
+    // Replace this comment with your code...
 }
 
 /*******************************************************************************
@@ -342,7 +371,7 @@ function normalizeCoord(value) {
  ******************************************************************************/
 
 function formatCoords(...values) {
-  // Replace this comment with your code...
+    // Replace this comment with your code...
 }
 
 /*******************************************************************************
@@ -374,7 +403,7 @@ function formatCoords(...values) {
  ******************************************************************************/
 
 function countForProvince(provinceCode, ...postalCodes) {
-  // Replace this comment with your code...
+    // Replace this comment with your code...
 }
 
 /*******************************************************************************
@@ -427,7 +456,7 @@ function countForProvince(provinceCode, ...postalCodes) {
  ******************************************************************************/
 
 function generateLicenseLink(licenseCode, includeLicenseAttr) {
-  // Replace this comment with your code...
+    // Replace this comment with your code...
 }
 
 /*******************************************************************************
@@ -456,7 +485,7 @@ function generateLicenseLink(licenseCode, includeLicenseAttr) {
  ******************************************************************************/
 
 function toBool(value) {
-  // Replace this comment with your code...
+    // Replace this comment with your code...
 }
 
 /*******************************************************************************
@@ -475,15 +504,15 @@ function toBool(value) {
  ******************************************************************************/
 
 function all() {
-  // Replace this comment with your code...
+    // Replace this comment with your code...
 }
 
 function some() {
-  // Replace this comment with your code...
+    // Replace this comment with your code...
 }
 
 function none() {
-  // Replace this comment with your code...
+    // Replace this comment with your code...
 }
 
 /*******************************************************************************
@@ -539,7 +568,7 @@ function none() {
  ******************************************************************************/
 
 function buildQuery(query, perPage, page, format) {
-  // Replace this comment with your code...
+    // Replace this comment with your code...
 }
 
 // Our unit test files need to access the functions we defined
