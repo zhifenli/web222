@@ -195,9 +195,14 @@ function cleanUp(value) {
  * @param {boolean|undefined} muted - whether to include the `muted` attribute or not
  * @returns {string} - the HTML string for the <video> tag
  ******************************************************************************/
+// test driven development:
+// 1. write test and make it fail. Avoid false positive
+// 2. write minimum code to make it pass.
 
 function createVideo(src, loop, muted) {
-
+    let loopStr = true === loop ? " loop" : "";
+    let mutedStr = true === muted ? " muted" : "";
+    return `<video src=\"${src.trim()}\"${loopStr}${mutedStr}></video>`
 }
 
 /*******************************************************************************
