@@ -248,7 +248,7 @@ function createVideo(src, loop, muted) {
 
 function fixPostalCode(postalCode) {
     let result = postalCode.trim();
-    if(result[3] != " "){
+    if (result[3] != " ") {
         result = result.substring(0, 3) + " " + result.substring(3);
     }
 
@@ -257,30 +257,30 @@ function fixPostalCode(postalCode) {
 
     // result = (result.substring(0, 3)) + " " + (result.substring(3));
     if (result.length != 7) {
-        throw new Error();
+        throw new Error("Not 7 length");
     }
     const badFirstLetters = ["D", "F", "I", "O", "Q", "W", "U", "Z"];
     const badThirdLetters = "DFIOQU";
     const badSixthLetters = "DFIOQU";
     if (badFirstLetters.includes(result.charAt(0))) {
-        throw new Error();
+        throw new Error(`has badFirstLetters: ${badFirstLetters}`);
     }
     if (badThirdLetters.includes(result.charAt(2))) {
-        throw new Error();
+        throw new Error(`has badThirdLetters: ${badThirdLetters}`);
     }
     if (badSixthLetters.includes(result.charAt(5))) {
-        throw new Error();
+        throw new Error(badSixthLetters);
     }
-        
+
     // if(!/^[0-9]$/.test(result[1])) { // 9
     //     throw new Error();
     // }
-    if(!(result[1] >= "0" && result[1] <= "9")) { // 9
-        throw new Error();
+    if (!(result[1] >= "0" && result[1] <= "9")) { // 9
+        throw new Error("2nd is not a digit ");
     }
 
     if (!/[A-Z]\d[A-Z]\s\d[A-Z]\d/.test(result)) {
-        throw new Error();
+        throw new Error("bad");
     }
     return result;
 
@@ -328,7 +328,126 @@ function fixPostalCode(postalCode) {
  ******************************************************************************/
 
 function toProvince(postalCode, useLongForm) {
-    // Replace this comment with your code...
+    const onPrefix = ['K', 'L', 'M', 'N', 'P'];
+    const qcPrefix = ['G', 'H', 'J'];
+    try {
+        postalCode = fixPostalCode(postalCode);
+    } catch (e) {
+        console.log("### e", e.message)
+        return null;
+    }
+    console.log("### valid postcode", postalCode)
+
+
+    // if (!(/^[A-Z][0-9][A-Z][0-9][A-Z][0-9]$/).test(postalCode)) {
+    //     console.log("###0 ", postalCode)
+       
+    //     return null;
+    // }
+
+    console.log("###1 ", postalCode)
+
+
+    if (onPrefix.includes(postalCode.charAt(0))) {
+        console.log(1)
+        if (useLongForm == true) {
+            return 'Ontario';
+        }
+        else {
+        console.log(2)
+
+            return 'ON'
+        }
+    }
+    console.log(3)
+
+    if (qcPrefix.includes(postalCode.charAt(0))) {
+        if (useLongForm == true) {
+            return 'Quebec';
+        }
+        else {
+            return 'QC'
+        }
+    }
+
+    if (postalCode.charAt(0) == 'B') {
+        if (useLongForm == true) {
+            return 'Nova Scotia';
+        }
+        else {
+            return 'NS'
+        }
+    }
+
+    if (postalCode.charAt(0) == 'E') {
+        if (useLongForm == true) {
+            return 'New Brunswick';
+        }
+        else {
+            return 'NB'
+        }
+    }
+    if (postalCode.charAt(0) == 'R') {
+        if (useLongForm == true) {
+            return 'Manitoba';
+        }
+        else {
+            return 'MB'
+        }
+    }
+    if (postalCode.charAt(0) == 'V') {
+        if (useLongForm == true) {
+            return 'British Columbia';
+        }
+        else {
+            return 'BC'
+        }
+    }
+    if (postalCode.charAt(0) == 'C') {
+        if (useLongForm == true) {
+            return 'Prince Edward Island';
+        }
+        else {
+            return 'PE'
+        }
+    }
+    if (postalCode.charAt(0) == 'S') {
+        if (useLongForm == true) {
+            return 'Saskatchewan';
+        }
+        else {
+            return 'SK'
+        }
+    }
+    if (postalCode.charAt(0) == 'T') {
+        if (useLongForm == true) {
+            return 'Alberta';
+        }
+        else {
+            return 'AB'
+        }
+    }
+    if (postalCode.charAt(0) == 'A') {
+        return useLongForm ? 'Newfoundland and Labrador' : 'NL';
+    }
+
+    if (postalCode.charAt(0) == 'X') {
+        if (useLongForm == true) {
+            return 'Northwest Territories and Nunavut';
+        }
+        else {
+            return 'NT'
+        }
+    }
+    if (postalCode.charAt(0) == 'Y') {
+        if (useLongForm == true) {
+            return 'Yukon';
+        }
+        else {
+            return 'YT'
+        }
+    }
+
 }
 
 /*******************************************************************************
