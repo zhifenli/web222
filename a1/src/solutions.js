@@ -242,12 +242,17 @@ function createVideo(src, loop, muted) {
  ******************************************************************************/
 
 function fixPostalCode(postalCode) {
-    let result = postalCode.replaceAll(/\s/g, "");
+    let result = postalCode.trim();
+    if(result[3] != " "){
+        result = result.substring(0, 3) + " " + result.substring(3);
+    }
+
     result = result.replaceAll("-", "");
-    result = (result.substring(0, 3)) + " " + (result.substring(3));
     result = result.toUpperCase();
+
+    // result = (result.substring(0, 3)) + " " + (result.substring(3));
     if (result.length != 7) {
-        throw new Error;
+        throw new Error();
     }
     const badFirstLetters = ["D", "F", "I", "O", "Q", "W", "U", "Z"];
     const badThirdLetters = "DFIOQU";
@@ -261,6 +266,14 @@ function fixPostalCode(postalCode) {
     if (badSixthLetters.includes(result.charAt(5))) {
         throw new Error();
     }
+        
+    // if(!/^[0-9]$/.test(result[1])) { // 9
+    //     throw new Error();
+    // }
+    if(!(result[1] >= "0" && result[1] <= "9")) { // 9
+        throw new Error();
+    }
+
     if (!/[A-Z]\d[A-Z]\s\d[A-Z]\d/.test(result)) {
         throw new Error();
     }
