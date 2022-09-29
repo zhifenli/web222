@@ -125,7 +125,7 @@ describe('Problem 9 - toBool(), all(), none() functions', function () {
 
  */
 
-  describe('all()', function () {
+  describe.only('all()', function () {
     test('single "true" value works the same as toBool()', function () {
       expect(all(true)).toBe(true);
       expect(all('true')).toBe(true);

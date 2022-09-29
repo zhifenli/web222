@@ -644,7 +644,28 @@ function generateLicenseLink(licenseCode, includeLicenseAttr) {
  ******************************************************************************/
 
 function toBool(value) {
-  // Replace this comment with your code...
+  let trueValueList = ['YES', 'Y', 'OUI', 'O', 'TRUE', 'T', 'VRAI', 'V'];
+  let falseValueList = ['NO', 'N', 'FALSE', 'F', 'FAUX', 'NON'];
+
+  if (value == undefined) {
+    throw new Error("invalid value");
+  }
+  if (value === true || value === false) {
+    return value;
+  }
+
+  if (typeof value === "number") {
+    // return value > 0 ? true : false;
+    return value > 0;
+  }
+
+  if (trueValueList.includes(value.toUpperCase())) {
+    return true;
+  }
+
+  if (falseValueList.includes(value.toUpperCase())) {
+    return false;
+  }
 }
 
 /*******************************************************************************
@@ -661,18 +682,62 @@ function toBool(value) {
  * Use try/catch syntax to avoid having your functions throw errors when pureBool()
  * throws on invalid data.
  ******************************************************************************/
-
+// variable -> variaic 
 function all() {
-  // Replace this comment with your code...
+  //console.log("### ?? buildin args for the functions", arguments, arguments[0], arguments.length);
+  // ...values as parameter: an array of any number of params passed in when called.
+  // builtin argumetns is json object, keys are index.
+  let args = [];
+  let result;
+  for (let i = 0; i < arguments.length; i++) {
+    args.push(toBool(arguments[i]));
+    result = args.every(x => x == args[0]);
+  }
+  return result ? args[0] : false;
 }
 
 function some() {
-  // Replace this comment with your code...
+  let args = [];
+  let result;
+  let trues = [];
+  let falses = [];
+
+  for (let i = 0; i < arguments.length; i++) {
+    trues.push(args.push(toBool(arguments[i])) == true);
+    falses.push(args.push(toBool(arguments[i])) == false);
+    result = args.every(x => x == args[0]);
+  }
+  trues.push(args.every(x => x == true));
+  if (result == true) {
+    return args[0];
+  }
+  else {
+    return trues.length > falses.length ? true : false;
+  }
 }
 
 function none() {
-  // Replace this comment with your code...
+  let args = [];
+  let result;
+  let trues = [];
+  let falses = [];
+
+  for (let i = 0; i < arguments.length; i++) {
+    args.push(toBool(arguments[i]));
+    result = args.every(x => x == args[0]);
+  }
+
+  trues.push(args.filter(x => x == "true"));
+  falses.push(args.filter(x => x == "false"));
+
+  if (result == true) {
+    return true;
+  }
+  else {
+    return trues.length > falses.length ? true : false;
+  }
 }
+
 
 /*******************************************************************************
  * Problem 10 - build a URL
