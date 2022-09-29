@@ -336,21 +336,15 @@ function toProvince(postalCode, useLongForm) {
     return null;
   }
 
-  console.log("###1 ", postalCode)
-
-
   if (onPrefix.includes(postalCode.charAt(0))) {
-    console.log(1)
     if (useLongForm == true) {
       return 'Ontario';
     }
     else {
-      console.log(2)
 
       return 'ON'
     }
   }
-  console.log(3)
 
   if (qcPrefix.includes(postalCode.charAt(0))) {
     if (useLongForm == true) {
@@ -556,7 +550,19 @@ function formatCoords(...values) {
  ******************************************************************************/
 
 function countForProvince(provinceCode, ...postalCodes) {
+  let useLongForm = provinceCode.length == 2 ? false : true;
+  // let postalCodes = [];
+  let num = 0;
+  for (let i = 0; i < postalCodes.length; i++) {
+    if (toProvince(postalCodes[i], useLongForm) == provinceCode) {
+      num++;
+    }
+  }
 
+  if (postalCodes.length == 0 || postalCodes.some(x => typeof x != "string")) {
+    throw new Error();
+  }
+  return num;
 }
 
 /*******************************************************************************
