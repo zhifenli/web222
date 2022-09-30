@@ -3,9 +3,6 @@
 > eslint src/**/*.js
 
 
-/Users/zhifenli/Documents/term 2/web222/a1/src/arr.js
-  29:20  warning  Expected '===' and instead saw '=='  eqeqeq
-
 /Users/zhifenli/Documents/term 2/web222/a1/src/solutions.js
   205:22  error    Unnecessary escape character: \"                                           no-useless-escape
   205:37  error    Unnecessary escape character: \"                                           no-useless-escape
@@ -77,6 +74,6 @@
   744:14  warning  Expected '===' and instead saw '=='                                        eqeqeq
   746:10  warning  Unnecessary 'else' after 'return'                                          no-else-return
 
-✖ 70 problems (12 errors, 58 warnings)
+✖ 69 problems (12 errors, 57 warnings)
   0 errors and 17 warnings potentially fixable with the `--fix` option.
 

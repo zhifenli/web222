@@ -344,36 +344,36 @@ function toProvince(postalCode, useLongForm) {
     return useLongForm ? 'Quebec' : 'QC';
   }
 
-  if (postalCode.charAt(0) === 'B') {
+  if (postalCode.charAt(0) == 'B') {
     return useLongForm ? 'Nova Scotia' : 'NS';
   }
 
-  if (postalCode.charAt(0) === 'E') {
+  if (postalCode.charAt(0) == 'E') {
     return useLongForm ? 'New Brunswick' : 'NB';
   }
-  if (postalCode.charAt(0) === 'R') {
+  if (postalCode.charAt(0) == 'R') {
     return useLongForm ? 'Manitoba' : 'MB';
   }
-  if (postalCode.charAt(0) === 'V') {
+  if (postalCode.charAt(0) == 'V') {
     return useLongForm ? 'British Columbia' : 'BC';
   }
-  if (postalCode.charAt(0) === 'C') {
+  if (postalCode.charAt(0) == 'C') {
     return useLongForm ? 'Prince Edward Island' : 'PE';
   }
-  if (postalCode.charAt(0) === 'S') {
+  if (postalCode.charAt(0) == 'S') {
     return useLongForm ? 'Saskatchewan' : 'SK';
   }
-  if (postalCode.charAt(0) === 'T') {
+  if (postalCode.charAt(0) == 'T') {
     return useLongForm ? 'Alberta' : 'AB';
   }
-  if (postalCode.charAt(0) === 'A') {
+  if (postalCode.charAt(0) == 'A') {
     return useLongForm ? 'Newfoundland and Labrador' : 'NL';
   }
 
-  if (postalCode.charAt(0) === 'X') {
+  if (postalCode.charAt(0) == 'X') {
     return useLongForm ? 'Northwest Territories and Nunavut' : 'NT';
   }
-  if (postalCode.charAt(0) === 'Y') {
+  if (postalCode.charAt(0) == 'Y') {
     return useLongForm ? 'Yukon' : 'YT';
   }
 }
@@ -405,7 +405,7 @@ function toProvince(postalCode, useLongForm) {
 
 function normalizeCoord(value) {
   let lat, lon;
-  if (value[0] === '[') {
+  if (value[0] == '[') {
     [lon, lat] = value.substring(1, value.length - 1).split(',');
   } else {
     [lat, lon] = value.split(' ');
@@ -491,16 +491,16 @@ function formatCoords(...values) {
  ******************************************************************************/
 
 function countForProvince(provinceCode, ...postalCodes) {
-  let useLongForm = provinceCode.length === 2 ? false : true;
+  let useLongForm = provinceCode.length == 2 ? false : true;
   // let postalCodes = [];
   let num = 0;
   for (let i = 0; i < postalCodes.length; i++) {
-    if (toProvince(postalCodes[i], useLongForm) === provinceCode) {
+    if (toProvince(postalCodes[i], useLongForm) == provinceCode) {
       num++;
     }
   }
 
-  if (postalCodes.length === 0 || postalCodes.some((x) => typeof x !== 'string')) {
+  if (postalCodes.length == 0 || postalCodes.some((x) => typeof x != 'string')) {
     throw new Error();
   }
   return num;
@@ -564,20 +564,18 @@ function generateLicenseLink(licenseCode, includeLicenseAttr) {
     'CC-BY-NC-SA': 'Creative Commons Attribution-NonCommercial-ShareAlike License',
     'CC-BY-NC-ND': 'Creative Commons Attribution-NonCommercial-NoDerivs License'
   };
-  //console.log(Object.keys(code2Text));
-  //console.log(Object.keys(code2Text).includes(licenseCode));
-  if (Object.keys(code2Text).includes(licenseCode)) {
+  if (Object.keys[code2Text].includes(licenseCode)) {
     let partLicenseCode = licenseCode.toLowerCase().substring(3);
-    if (includeLicenseAttr === true) {
+    if (includeLicenseAttr == true) {
       return `<a href="https://creativecommons.org/licenses/${partLicenseCode}/4.0/" rel="license">${code2Text[licenseCode]}</a>`;
     }
     return `<a href="https://creativecommons.org/licenses/${partLicenseCode}/4.0/">${code2Text[licenseCode]}</a>`;
   } else {
-    if (includeLicenseAttr === true) {
+    if (includeLicenseAttr == true) {
       return `<a href="https://choosealicense.com/no-permission/" rel="license">All Rights Reserved</a>`;
-    }
+    } 
     return '<a href="https://choosealicense.com/no-permission/">All Rights Reserved</a>';
-  }
+}
 }
 /*******************************************************************************
  * Problem 9 Part 1: convert a value to a Boolean (true or false)
@@ -608,10 +606,7 @@ function toBool(value) {
   let trueValueList = ['YES', 'Y', 'OUI', 'O', 'TRUE', 'T', 'VRAI', 'V'];
   let falseValueList = ['NO', 'N', 'FALSE', 'F', 'FAUX', 'NON'];
 
-  if (value === undefined) {
-    throw new Error('invalid value');
-  }
-  if (value === null) {
+  if (value == undefined) {
     throw new Error('invalid value');
   }
   if (value === true || value === false) {
@@ -672,7 +667,7 @@ function some() {
     result = args.every((x) => x === args[0]);
   }
   trues.push(args.every((x) => x === true));
-  if (result === true) {
+  if (result == true) {
     return args[0];
   }
   return trues.length > falses.length ? true : false;

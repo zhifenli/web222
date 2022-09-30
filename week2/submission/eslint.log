@@ -1,0 +1,79 @@
+
+> web222-assignment-1@6.0.0 eslint
+> eslint src/**/*.js
+
+
+/Users/zhifenli/Documents/term 2/web222/a1/src/solutions.js
+  205:22  error    Unnecessary escape character: \"                                           no-useless-escape
+  205:37  error    Unnecessary escape character: \"                                           no-useless-escape
+  251:17  warning  Expected '!==' and instead saw '!='                                        eqeqeq
+  259:21  warning  Expected '!==' and instead saw '!='                                        eqeqeq
+  340:21  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  342:12  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  348:21  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  350:12  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  355:28  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  356:21  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  358:12  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  363:28  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  364:21  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  366:12  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  370:28  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  371:21  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  373:12  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  377:28  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  378:21  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  380:12  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  384:28  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  385:21  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  387:12  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  391:28  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  392:21  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  394:12  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  398:28  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  399:21  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  401:12  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  405:28  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  409:28  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  410:21  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  412:12  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  416:28  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  417:21  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  419:12  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  453:16  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  504:17  error    Empty block statement                                                      no-empty
+  539:41  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  543:49  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  548:26  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  548:67  warning  Expected '!==' and instead saw '!='                                        eqeqeq
+  613:17  error    Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  615:28  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  616:7   error    'result' is not defined                                                    no-undef
+  619:14  error    'result' is not defined                                                    no-undef
+  620:12  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  621:7   error    'result' is not defined                                                    no-undef
+  622:14  error    'result' is not defined                                                    no-undef
+  624:10  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  625:28  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  626:7   error    'result' is not defined                                                    no-undef
+  627:14  error    'result' is not defined                                                    no-undef
+  628:12  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  629:7   error    'result' is not defined                                                    no-undef
+  630:14  error    'result' is not defined                                                    no-undef
+  664:13  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  708:34  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  720:48  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  721:49  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  722:34  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  724:34  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  725:14  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  727:10  warning  Unnecessary 'else' after 'return'                                          no-else-return
+  740:34  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  742:35  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  743:36  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  744:14  warning  Expected '===' and instead saw '=='                                        eqeqeq
+  746:10  warning  Unnecessary 'else' after 'return'                                          no-else-return
+
+✖ 69 problems (12 errors, 57 warnings)
+  0 errors and 17 warnings potentially fixable with the `--fix` option.
+

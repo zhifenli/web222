@@ -2,12 +2,11 @@
 > web222-assignment-1@6.0.0 test
 > jest --
 
-jest-haste-map: Haste module naming collision: web222-assignment-1
-  The following files share their name; please adjust your hasteImpl:
-    * <rootDir>/package.json
-    * <rootDir>/submission/package.json
-
 PASS src/problem-09.test.js
+PASS src/problem-03.test.js
+PASS src/problem-10.test.js
+PASS src/problem-07.test.js
+PASS src/problem-05.test.js
 PASS src/problem-08.test.js
   ● Console
 
@@ -16,18 +15,14 @@ PASS src/problem-08.test.js
 
       at log (src/solutions.js:618:15)
 
-PASS src/problem-03.test.js
-PASS src/problem-10.test.js
-PASS src/problem-05.test.js
-PASS src/problem-07.test.js
-PASS src/problem-00.test.js
 PASS src/problem-04.test.js
-PASS src/problem-01.test.js
+PASS src/problem-00.test.js
 PASS src/problem-06.test.js
+PASS src/problem-01.test.js
 PASS src/problem-02.test.js
 
 Test Suites: 11 passed, 11 total
 Tests:       114 passed, 114 total
 Snapshots:   0 total
-Time:        0.87 s, estimated 1 s
+Time:        0.811 s, estimated 1 s
 Ran all test suites.
