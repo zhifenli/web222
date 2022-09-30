@@ -615,7 +615,38 @@ function countForProvince(provinceCode, ...postalCodes) {
  ******************************************************************************/
 
 function generateLicenseLink(licenseCode, includeLicenseAttr) {
-  // Replace this comment with your code...
+  const code2Text = {
+    "CC-BY": "Creative Commons Attribution License",
+    "CC-BY-NC": "Creative Commons Attribution-NonCommercial License",
+    "CC-BY-SA": "Creative Commons Attribution-ShareAlike License",
+    "CC-BY-ND": "Creative Commons Attribution-NoDerivs License",
+    "CC-BY-NC-SA": "Creative Commons Attribution-NonCommercial-ShareAlike License",
+    "CC-BY-NC-ND": "Creative Commons Attribution-NonCommercial-NoDerivs License",
+  };
+
+  if (code2Text.hasOwnProperty(licenseCode)) {
+    let partLicenseCode = licenseCode.toLowerCase().substring(3);
+    if (includeLicenseAttr == true) {
+      result = `<a href="https://creativecommons.org/licenses/${partLicenseCode}/4.0/" rel="license">${code2Text[licenseCode]}</a>`;
+
+      console.log(code2Text[licenseCode]);
+      return result;
+    }
+    else {
+      result = `<a href="https://creativecommons.org/licenses/${partLicenseCode}/4.0/">${code2Text[licenseCode]}</a>`;
+      return result;
+    }
+  }
+  else {
+    if (includeLicenseAttr == true) {
+      result = `<a href="https://choosealicense.com/no-permission/" rel="license">All Rights Reserved</a>`;
+      return result;
+    }
+    else {
+      result = '<a href="https://choosealicense.com/no-permission/">All Rights Reserved</a>';
+      return result;
+    }
+  }
 }
 
 /*******************************************************************************
@@ -726,10 +757,8 @@ function none() {
     args.push(toBool(arguments[i]));
     result = args.every(x => x == args[0]);
   }
-
   trues.push(args.filter(x => x == "true"));
   falses.push(args.filter(x => x == "false"));
-
   if (result == true) {
     return true;
   }
