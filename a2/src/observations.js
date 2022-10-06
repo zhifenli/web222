@@ -92,7 +92,17 @@ function getTotalResults(data) {
  *
  * Your function shouldn't return anything, just call console.log()
  ******************************************************************************/
-function observationSummary(data) {}
+function observationSummary(data) {
+  for (let i = 0; i < data.results.length; i++) {
+    console.log(
+      data.results[i].id +
+        '@' +
+        data.results[i].observed_on_details.date +
+        ': ' +
+        data.results[i].species_guess
+    );
+  }
+}
 
 /*******************************************************************************
  * Problem 01 Part 2: use forEach() to iterate over Arrays
@@ -103,7 +113,9 @@ function observationSummary(data) {}
  * See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
  ******************************************************************************/
 function observationSummary2(data) {
-  // TODO - use forEach()
+  data.results.forEach((item) => {
+    console.log(item.id + '@' + item.observed_on_details.date + ': ' + item.species_guess);
+  });
 }
 
 /*******************************************************************************
