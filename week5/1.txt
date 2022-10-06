@@ -1,0 +1,15 @@
+function isValidPassward(s){
+    if(s.length < 8 || s.length > 32){
+        return false;
+    }
+    if(!(/[A-Z]/g.test(s))){
+        return false;
+    }
+    if(!(/\d/g.test(s))){
+        return false;
+    }
+    if(!(/[!@#$%^&*-+{}]/g.test(s))){
+        return false;
+    }
+    return true;
+}
