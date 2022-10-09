@@ -159,9 +159,33 @@ function observationSummary2(data) {
  * Your function should return the newly created Array.
  ******************************************************************************/
 function observationsByPrivacy(data, geoPrivacy) {
-  // TODO - use a for...of loop
-}
+  // open, hidden, null
+  if (geoPrivacy !== null) {
+    if (typeof geoPrivacy !== 'string') {
+      throw new Error();
+    }
+    //"open", "hidden"
+    geoPrivacy = geoPrivacy.toLowerCase();
+    if (geoPrivacy !== 'open' && geoPrivacy !== 'hidden') {
+      throw new Error();
+    }
+  }
 
+  // geoPrivacy is valid, and lowercase, or null
+
+  // return data.results.filter((item) => item.geoprivacy === geoPrivacy);
+  const newObservation = [];
+
+  geoPrivacy = geoPrivacy ? geoPrivacy.toLowerCase() : null;
+
+  for (let item of data.results) {
+    if (item.geoprivacy === geoPrivacy) {
+      newObservation.push(item);
+    }
+  }
+
+  return newObservation;
+}
 /*******************************************************************************
  * Problem 3 Part I: transformObservation(original) and transformObservations(cases)
  *
