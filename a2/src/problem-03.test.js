@@ -23,63 +23,63 @@ describe('Problem 03 - transformObservation(), transformObservations(), transfor
       sample = Object.assign({}, result0);
     });
 
-    test('should return an Object', function () {
-      let result = transformObservation(sample);
-      expect(typeof result).toBe('object');
-    });
+    // test('should return an Object', function () {
+    //   let result = transformObservation(sample);
+    //   expect(typeof result).toBe('object');
+    // });
 
-    test('should return an Object containing an id property', function () {
-      let result = transformObservation(sample);
-      expect(result.id).toBe(sample.id);
-    });
+    // test('should return an Object containing an id property', function () {
+    //   let result = transformObservation(sample);
+    //   expect(result.id).toBe(sample.id);
+    // });
 
-    test('should return an Object containing a speciesGuess property', function () {
-      let result = transformObservation(sample);
-      expect(result.speciesGuess).toBe(sample.species_guess);
-    });
+    // test('should return an Object containing a speciesGuess property', function () {
+    //   let result = transformObservation(sample);
+    //   expect(result.speciesGuess).toBe(sample.species_guess);
+    // });
 
-    test('should return an Object containing an isResearchQuality property', function () {
-      sample.quality_grade = 'research';
-      expect(transformObservation(sample).isResearchQuality).toBe(true);
+    // test('should return an Object containing an isResearchQuality property', function () {
+    //   sample.quality_grade = 'research';
+    //   expect(transformObservation(sample).isResearchQuality).toBe(true);
 
-      sample.quality_grade = 'casual';
-      expect(transformObservation(sample).isResearchQuality).toBe(false);
-    });
+    //   sample.quality_grade = 'casual';
+    //   expect(transformObservation(sample).isResearchQuality).toBe(false);
+    // });
 
-    test('should return an Object containing a.geoCoords Array property', function () {
-      let result = transformObservation(sample);
-      expect(Array.isArray(result.geoCoords)).toBe(true);
-    });
+    // test('should return an Object containing a.geoCoords Array property', function () {
+    //   let result = transformObservation(sample);
+    //   expect(Array.isArray(result.geoCoords)).toBe(true);
+    // });
 
-    test('geoCoords Array should include two Numbers', function () {
-      sample.location = '43,-72';
-      let result = transformObservation(sample);
-      expect(result.geoCoords.length).toBe(2);
-      expect(typeof result.geoCoords[0]).toBe('number');
-      expect(typeof result.geoCoords[1]).toBe('number');
-    });
+    // test('geoCoords Array should include two Numbers', function () {
+    //   sample.location = '43,-72';
+    //   let result = transformObservation(sample);
+    //   expect(result.geoCoords.length).toBe(2);
+    //   expect(typeof result.geoCoords[0]).toBe('number');
+    //   expect(typeof result.geoCoords[1]).toBe('number');
+    // });
 
-    test('geoCoords Array should be in the form [lng, lat]', function () {
-      sample.location = '43,-72';
-      let result = transformObservation(sample);
-      expect(result.geoCoords[0]).toBe(-72);
-      expect(result.geoCoords[1]).toBe(43);
-    });
+    // test('geoCoords Array should be in the form [lng, lat]', function () {
+    //   sample.location = '43,-72';
+    //   let result = transformObservation(sample);
+    //   expect(result.geoCoords[0]).toBe(-72);
+    //   expect(result.geoCoords[1]).toBe(43);
+    // });
 
     test('should return an Object containing a user property', function () {
       let result = transformObservation(sample);
       expect(result.user).toBe('@photon_polyphemus');
     });
 
-    test('should return an Object containing a photos Array of URLs', function () {
-      let result = transformObservation(sample);
-      expect(Array.isArray(result.photoUrls)).toBe(true);
-      expect(result.photoUrls.length).toBe(1);
-      expect(result.photosCount).toBe(result.photoUrls.length);
-      let url = result.photoUrls[0];
-      expect(typeof url).toBe('string');
-      expect(isUrl(url)).toBe(true);
-    });
+    // test('should return an Object containing a photos Array of URLs', function () {
+    //   let result = transformObservation(sample);
+    //   expect(Array.isArray(result.photoUrls)).toBe(true);
+    //   expect(result.photoUrls.length).toBe(1);
+    //   expect(result.photosCount).toBe(result.photoUrls.length);
+    //   let url = result.photoUrls[0];
+    //   expect(typeof url).toBe('string');
+    //   expect(isUrl(url)).toBe(true);
+    // });
 
     test('should return an Object containing a photos Array of multiple URLs', function () {
       const photo = sample.photos[0];

@@ -208,7 +208,21 @@ function observationsByPrivacy(data, geoPrivacy) {
  * }
  ******************************************************************************/
 function transformObservation(original) {
-  // TODO
+  let photoUrls = original.photos.map((item) => item.url);
+  let observation = {
+    id: original.id,
+    speciesGuess: original.species_guess,
+    isResearchQuality: original.quality_grade === 'research',
+    geoCoords: original.location
+      .split(',')
+      .map((item) => Number(item))
+      .reverse(),
+    photoUrls: photoUrls,
+    photosCount: photoUrls.length,
+    user: '@' + original.user.login_exact
+  };
+
+  return observation;
 }
 
 /*******************************************************************************
@@ -227,7 +241,11 @@ function transformObservation(original) {
  *  - return the new Array containing all the transformed Objects
  ******************************************************************************/
 function transformObservations(data) {
-  // TODO - use for-loop or forEach()
+  let arr = [];
+  data.results.forEach((item) => {
+    arr.push(transformObservation(item));
+  });
+  return arr;
 }
 
 /*******************************************************************************
@@ -244,7 +262,11 @@ function transformObservations(data) {
  *  - return the Array created by the .map() method
  ******************************************************************************/
 function transformObservations2(data) {
-  // TODO - use map()
+  let arr1 = [];
+  data.results.map((item) => {
+    arr1.push(transformObservation(item));
+  });
+  return arr1;
 }
 
 /*******************************************************************************
