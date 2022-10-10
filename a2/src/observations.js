@@ -300,7 +300,14 @@ function transformObservations2(data) {
  *  - use the .find() method to locate items by id, see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
  ******************************************************************************/
 function getObservationsById(data, ...ids) {
-  // TODO
+  const res = data.results.filter((item) => ids.includes(item.id));
+  if (res.length <= 0) {
+    return null;
+  }
+  if (res.length === 1) {
+    return res[0];
+  }
+  return res;
 }
 
 /*******************************************************************************
@@ -335,9 +342,7 @@ function getObservationsById(data, ...ids) {
  * Use the Array .filter() method in your solution.
  ******************************************************************************/
 
-function getObservationsByPositionalAccuracy(data, options = {}) {
-  // TODO
-}
+function getObservationsByPositionalAccuracy(data, options = {}) {}
 
 /*******************************************************************************
  * Problem 06: getTaxonPhotos()
