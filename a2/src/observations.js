@@ -418,17 +418,29 @@ function getObservationsByPositionalAccuracy(data, options = {}) {
  * Your function should return the new Array of photo size URLs
  ******************************************************************************/
 function getTaxonPhotos(data) {
-  // let photoSizeUrls = [];
-  // console.log(data.results.map((item) => item.taxon.default_photo.url));
-  // //data.results.map(item=>item.taxon.default_photo.url)
-  // let taxon = {
-  //   original:
-  //   square:
-  //   small:
-  //   medium:
-  //   large:
-  // }
+  //console.log(data.results.map((item) => item.taxon.default_photo.url));
+  let arr = [];
+  for (let item of data.results) {
+    if (item.taxon === null || item.taxon === undefined) {
+      return arr;
+    }
+    let url = item.taxon.default_photo.url;
+    let parts = url.split('/');
+    url = parts.slice(0, parts.length - 1).join('/');
+
+    let photoUrls = {
+      original: url + '/original.jpg',
+      square: url + '/square.jpg',
+      small: url + '/small.jpg',
+      medium: url + '/medium.jpg',
+      large: url + '/large.jpg'
+    };
+    arr.push(photoUrls);
+  }
+  return arr;
 }
+
+//function getTaxonPhotos(data) {url.replace(/\/[^\/]*$/, "")}
 
 /*******************************************************************************
  * Problem 07: getUserStats()
