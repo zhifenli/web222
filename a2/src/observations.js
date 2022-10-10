@@ -183,7 +183,6 @@ function observationsByPrivacy(data, geoPrivacy) {
       newObservation.push(item);
     }
   }
-
   return newObservation;
 }
 /*******************************************************************************
@@ -419,7 +418,16 @@ function getObservationsByPositionalAccuracy(data, options = {}) {
  * Your function should return the new Array of photo size URLs
  ******************************************************************************/
 function getTaxonPhotos(data) {
-  // TODO
+  // let photoSizeUrls = [];
+  // console.log(data.results.map((item) => item.taxon.default_photo.url));
+  // //data.results.map(item=>item.taxon.default_photo.url)
+  // let taxon = {
+  //   original:
+  //   square:
+  //   small:
+  //   medium:
+  //   large:
+  // }
 }
 
 /*******************************************************************************
@@ -480,7 +488,34 @@ function getTaxonPhotos(data) {
  * }
  ******************************************************************************/
 function getUserStats(data) {
-  // TODO
+  // data.results => [
+  //  { user: {} },
+  //  { user: {} }
+  // ]
+  let total_observations_count = 0;
+  let total_journal_posts_count = 0;
+  let total_species_count = 0;
+
+  for (let item of data.results) {
+    total_observations_count += item.user.observations_count;
+    total_journal_posts_count += item.user.journal_posts_count;
+    total_species_count += item.user.species_count;
+  }
+
+  let userInfo = {
+    count: data.results.length,
+    totals: {
+      observations: total_observations_count,
+      journals: total_journal_posts_count,
+      species: total_species_count
+    },
+    averages: {
+      observations: total_observations_count / data.results.length,
+      journals: total_journal_posts_count / data.results.length,
+      species: total_species_count / data.results.length
+    }
+  };
+  return userInfo;
 }
 
 /**
