@@ -533,7 +533,14 @@ function getUserStats(data) {
  * return the Array.
  */
 function extractUserLogins(data) {
-  // TODO
+  let array = [];
+  for (let item of data.results) {
+    array.push(item.user.login);
+  }
+  array = array.filter((item, index) => {
+    return array.indexOf(item) === index;
+  });
+  return array;
 }
 
 /**
@@ -551,7 +558,20 @@ function extractUserLogins(data) {
  */
 
 function extractUserLogins2(data) {
-  // TODO
+  // let s = data.results
+  //   .map((item) => item.user.login)
+  //   .reduce((prevReturnedThing, cur) => {
+  //     prevReturnedThing.add(cur);
+  //     return prevReturnedThing;
+  //   }, new Set());
+  // return Array.from(s);
+
+  return Array.from(new Set(data.results.map((item) => item.user.login)));
+
+  // let s = new Set();
+  // data.results.forEach((item) => s.add(item.user.login));
+  // let a = Array.from(s);
+  // return a;
 }
 
 // Our unit test files need to access the functions we defined
