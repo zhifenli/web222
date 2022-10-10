@@ -342,7 +342,39 @@ function getObservationsById(data, ...ids) {
  * Use the Array .filter() method in your solution.
  ******************************************************************************/
 
-function getObservationsByPositionalAccuracy(data, options = {}) {}
+function getObservationsByPositionalAccuracy(data, options = {}) {
+  if (!options || Object.keys(options).length === 0) {
+    return data.results;
+  }
+  // destruction
+  const { lessThan, greaterThan, equal } = options;
+
+  if (lessThan !== undefined && greaterThan !== undefined && equal !== undefined) {
+    let res = data.results.filter((item) => item.positional_accuracy === equal);
+    return res;
+  }
+
+  if (lessThan !== undefined && greaterThan !== undefined) {
+    let res = data.results.filter(
+      (item) => item.positional_accuracy > greaterThan && item.positional_accuracy < lessThan
+    );
+    return res;
+  }
+  if (equal !== undefined) {
+    let res = data.results.filter((item) => item.positional_accuracy === equal);
+    return res;
+  }
+  if (greaterThan !== undefined) {
+    let res = data.results.filter((item) => item.positional_accuracy > greaterThan);
+    return res;
+  }
+  if (lessThan !== undefined) {
+    let res = data.results.filter((item) => item.positional_accuracy < lessThan);
+    return res;
+  }
+
+  return data.results;
+}
 
 /*******************************************************************************
  * Problem 06: getTaxonPhotos()
