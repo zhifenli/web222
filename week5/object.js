@@ -160,7 +160,7 @@ function buildArray(a, b) {
   return array;
 }
 console.log(buildArray(5, 10));
-
+                                 
 arr = [1, 2, 3, 4];
 arr.map((item) => "$" + item);
 // function addDollars(item){
