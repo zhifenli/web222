@@ -7,8 +7,10 @@
     <title>Document</title>
     <script>
         function doit(){
-            var e = document.getElementById('id2').querySelector('p');
-            e.style.backgroundColor = "yellow";
+            var arr = document.getElementById('id2').querySelectorAll('p');
+            for(let p of arr){
+                p.style.backgroundColor = "yellow";
+            }
         }
     </script>
 </head>

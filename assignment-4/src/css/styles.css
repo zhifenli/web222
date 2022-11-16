@@ -1,0 +1,45 @@
+/**
+ * Override any styles here that you want to change (optional)...
+ */
+body{
+  background-image: url(./img/img.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+table{
+  border: 1px solid rgb(208, 150, 3);
+  margin: auto;
+  width: 80%;
+}
+tr{
+  margin: auto;
+  width: 80%;
+}
+td{
+  border: 0.2px solid rgb(208, 150, 3);
+  background-color: rgb(253, 199, 208);
+  margin: auto;
+  width: 33%;
+  text-align: left;
+  vertical-align: bottom;
+}
+h1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: pink;
+  
+}
+header,p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: pink;
+}
+#category-menu{
+  border: 2px solid rgb(208, 150, 3);
+  margin: 20px;
+  padding: 20px;
+}
+
+.nav-item {
+  color: rgb(247, 171, 221)
+}

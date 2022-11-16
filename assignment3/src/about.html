@@ -1,27 +1,59 @@
 <!-- Create your About page here. Make sure you include citations -->
 <!DOCTYPE html>
 <html lang="en">
-<nav>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Zhifen Li" />
+    <meta name="description" content="Mount Tai" />
+    <meta name="keywords" content="mount, Tai, Five Great Mountains, China" />
     <title>About Me</title>
-    <a href="#">About</a>
-    <label for="nav"><i class="fas fa-bars"></i></label>
-</head>
-<input type="checkbox" id="nav" hidden checked />
-<div overflow>
-  <ul>
-    <!--active link in navbar with active attribute-->
-    <li active><a href="index.html">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="honesty.html">Honesty</a></li>
-  </ul>
-</div>
-</nav>
-<body>
-    
-    
-</body>
+  </head>
+  <body style="background-image: url(mt.taishan-1.jpg); background-size: cover">
+    <div
+      style="
+        width: 60%;
+        margin: 50px auto;
+        padding: 35px;
+        border: 1px solid gray;
+        background-color: rgba(79, 190, 127, 0.832);
+      "
+    >
+      <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="honesty.html">Honesty</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1>All About Me</h1>
+        <audio controls autoplay muted loop>
+          <source src="betterdays.mp3" type="audio/mp3" />
+          <source src="betterdays.ogg" type="audio/ogg">
+          <p>Sorry, your browser doesn't support HTML5 audio. Here is a <a href="betterdays.mp3">link to the audio</a> instead</p>.
+          Your browser does not support the audio element.
+        </audio>
+        <h3><em>My Name: </em> ZHIFEN LI</h3>
+        <h3><em>Student Id: </em>168833218</h3>
+      </main>
+      <footer style="background-color: #a9f6b7; width: 60%; margin: 50px auto; padding: 35px">
+        <p style="text-align: center">
+          Written by <a href="fli92@myseneca.ca">Zhifen Li</a>.<br />
+          Visit me at: <a href="about.html">About Me</a><br />
+          <a href="fli92@myseneca.ca">fli92@myseneca.ca</a><br />
+          <Address style="text-align: center"> 
+            <p>
+              255 Alton circle, Suite 1600, Toronto 
+              <abbr title="Ontario">ON</abbr> <br>
+              Canada, M1V 4X8
+            </p>
+          </Address> 
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>

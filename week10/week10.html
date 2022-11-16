@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Web 222</h1>
+    <h2>Web 10: Forms</h2>
+    <h3>Personal Information</h3>
+    <form action="https://httpbin.org/get" method="get">
+      <div>
+        first name: <input name="firstName" type="text" size="15" value="hhh" >
+      </div>
+
+      <div>
+        What are your hobbies?
+        <input type="checkbox" name="hobbies" id="" value="sport"> Sprot
+        <input type="checkbox" name="hobbies" id="" value="music"> music
+      </div>
+
+      <div>
+        Which OS do you prefer?
+        <input type="radio" name="os" value="windows"> Windows
+        <input type="radio" name="os" value="Os"> Os
+
+      </div>
+
+      <div>
+        <label for="id1">Last Name</label>
+        <input name="lastName" type="text" 
+        id="id1" 
+         title="Enter your name"
+         placeholder="First name"
+         maxlength="16"/>
+      </div>
+
+      <div>
+        Pasword:
+        <input type="password" name="pass">
+      </div>
+
+      <div>
+        Upload your assignment:  <input type="file">
+      </div>
+      <div>
+        <input type="submit" value="Go" />
+      </div>
+    </form>
+  </body>
+</html>

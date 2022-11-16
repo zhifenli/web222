@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/outputList.js"></script>
+    <script src="js/outputTable.js"></script>
+    <script src="js/outputImage.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="image" style="border: 2px solid red"></div>
+
+    <table border="2">
+      <caption boder = "2px">
+        Order Information
+      </caption>
+
+      <thead>
+        <tr>
+          <th >Quantity</th>
+          <th >Colour</th>
+          <th>Price (CAD)</th>
+        </tr>
+      </thead>
+
+      <tbody border = "2">
+        <tr border = "2">
+          <td>1</td>
+          <td>Red</td>
+          <td>$5.60</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Blue</td>
+          <td>$3.00</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Blue</td>
+          <td>$1.50</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th colspan="2">Total</th>
+          //rowspan="3"
+          <th>$26.60</th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <img src="cat.jpg" alt="Picture of a cat" width="400" />
+    <audio controls>
+      <source src="song.mp3" type="audio/mp3" />
+      <source src="song.ogg" type="audio/ogg" />
+      <p>
+        Sorry, your browser doesn't support HTML5 audio. Here is a
+        <a href="song.mp3">link to the audio</a> instead
+      </p>
+    </audio>
+
+    <ul style="list-style-type: square">
+      <li>list item one</li>
+      <li>list item two</li>
+      <li>list item three</li>
+      <li>list item four</li>
+    </ul>
+
+    <ol start="3">
+      <!-- start="1" is the default -->
+      <li>list item one</li>
+      <li>list item two</li>
+      <li>list item three</li>
+      <li>list item four</li>
+    </ol>
+
+<!--definition-->
+    <dl>
+        <dt> First Term</dt>
+           <dd> First description for the term</dd>
+           <dd> Second description for the term</dd>
+        <dt> Second Term</dt>
+           <dd> First description for the term</dd>
+           <dd> Second description for the term</dd>
+           <dd> Third description for the term</dd>
+     </dl>
+
+     <div id="outputList"> list</div>
+
+     <button onclick="myFunction"> Click Me</button>
+
+     <table id="outputTable" border="1">
+        <tr>
+            <th> User</th>
+            <th>Address</th>
+        </tr>
+     </table>
+
+     <div class="picture">
+        <figure>
+            <img src="https://scs.senecac.on.ca/~patrick.crawford/shared/fall-2016/int222/image-01.jpg" alt="landscape1" title="landscape1"/>
+            <figcaption>This is a picture</figcaption>
+        </figure>
+     </div>
+  </body>
+</html>
