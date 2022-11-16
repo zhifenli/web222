@@ -61,14 +61,13 @@ function addC1Title(){
   ele.addEventListener("click", addTableHeader)
 }
 
+const c1Products = products.filter(product => products.categories == "c1")
 function addTable1(){
   const tbody = document.getElementById("products");
-  const tr1 = document.createElement(tr);
-  tbody.appendChild(tr1);
-  const td1 = document.createElement(td);
-  tbody.appendChild(td1);
-
   
+  for(let p of c1Products){
+    const content = `<tr><td>${p.name}</td> <td>${p.description}</td> <td>$${p.price}</td></tr>`
+  }
 }
 
 
