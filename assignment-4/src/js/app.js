@@ -21,37 +21,20 @@ function _id(id) {
   return document.getElementById(id);
 }
 
-function _class(className) {
-  return document.getElementsByClassName(className);
-}
-
-function showNavigation(){
+function showNavigation() {
   const nav = _id("category-menu");
-  categories.forEach(cat => {
-    const ele = document.createElement("span");
+  categories.forEach((cat) => {
+    const ele = document.createElement("button");
     ele.innerText = cat.description;
-    ele.classList = "nav-item"
-    ele.id = cat.id
+    ele.classList = "nav-item";
+    ele.id = cat.id;
     nav.appendChild(ele);
   });
 }
 
-//add table header
-// function addTableHeader(){
-//   const header = document.getElementsByTagName("thead")[0];
-//   header.innerHTML = "";
-//   const row = header.insertRow(0);
-//   const cell1 = row.insertCell(0);
-//   cell1.innerHTML = "<b>Name</b>";
-//   const cell2 = row.insertCell(1);
-//   cell2.innerHTML = "<b>Description</b>";
-//   const cell3 = row.insertCell(2);
-//   cell3.innerHTML = "<b>Price</b>";
-// }
-
-function addTableHeader(){
+function addTableHeader() {
   const header = document.getElementsByTagName("thead")[0];
-  header.innerHTML = ""
+  header.innerText = "";
   const tr = document.createElement("tr");
   const td1 = document.createElement("td");
   td1.innerHTML = "<b>Name</b>";
@@ -60,18 +43,20 @@ function addTableHeader(){
   const td3 = document.createElement("td");
   td3.innerHTML = "<b>Price</b>";
   tr.appendChild(td1);
-    tr.appendChild(td2);
-    tr.appendChild(td3);
-    header.appendChild(tr);
-} 
+  tr.appendChild(td2);
+  tr.appendChild(td3);
+  header.appendChild(tr);
+}
 
-function addTitle(id){
+function addTitle(id) {
   const ele = _id(id);
-  const categoryProducts = products.filter(product => product.categories == id && product.discontinued != true );
+  const categoryProducts = products.filter(
+    (product) => product.categories === id && product.discontinued !== true
+  );
   let description;
-  for(let c of categories){
-    if(c.id == id){
-       description = c.description
+  for (let c of categories) {
+    if (c.id === id) {
+      description = c.description;
     }
   }
   ele.addEventListener("click", () => {
@@ -81,20 +66,22 @@ function addTitle(id){
   });
 }
 
-function showTitle(description){
+function showTitle(description) {
   const ele = _id("category");
   ele.innerHTML = "";
   ele.innerText = description;
 }
 
-function addTable(productList){
+function addTable(productList) {
   const tbody = _id("products");
   tbody.innerHTML = "";
 
-  for(let p of productList){
+  for (let p of productList) {
     const tr = document.createElement("tr");
     tr.id = p.id;
-    tr.addEventListener("click", ()=> {console.log(p.name)});
+    tr.addEventListener("click", () => {
+      console.log(p);
+    });
     const td1 = document.createElement("td");
     td1.innerText = p.name;
 
@@ -102,8 +89,11 @@ function addTable(productList){
     td2.innerText = p.description;
 
     const td3 = document.createElement("td");
-    priceText = `$${p.price}`
-    td3.innerText = priceText; 
+
+    const priceStr = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(
+      p.price
+    );
+    td3.innerText = priceStr;
 
     tr.appendChild(td1);
     tr.appendChild(td2);
@@ -111,7 +101,6 @@ function addTable(productList){
     tbody.appendChild(tr);
   }
 }
-
 
 function main() {
   // For debugging, display all of our data in the console
@@ -126,7 +115,6 @@ function main() {
   addTitle("c2");
   addTitle("c3");
   addTitle("c4");
-
 }
 
 addEventListener("DOMContentLoaded", main);

@@ -9,10 +9,10 @@
  */
 
 window.categories = [
-    { id: "c1", description: "Mille crepes" },
-    { id: "c2", description: "Cup Cakes" },
-    { id: "c3", description: "Mini Cake" },
-    { id: "c4", description: "Birthday Cake" },
+  { id: "c1", description: "Mille crepes" },
+  { id: "c2", description: "Cup Cakes" },
+  { id: "c3", description: "Mini Cake" },
+  { id: "c4", description: "Birthday Cake" }
 ];
 
 // function getCategories() {
