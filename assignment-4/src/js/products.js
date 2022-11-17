@@ -18,7 +18,7 @@ window.products = [
       name: "Earl Grey",
       description: "Luxurious black tea is a true classic.",
       price: 9.99,
-      discontinued: true,
+      discontinued: false,
       categories: "c1"
     },
     {
@@ -26,7 +26,7 @@ window.products = [
       name: "Cheese",
       description: "Cheesy with a balance of sweetness.",
       price: 10.99,
-      discontinued: true,
+      discontinued: false,
       categories: "c1"
     },
     {
@@ -42,7 +42,7 @@ window.products = [
       name: "Tiramisuy",
       description: "Coffee lovers rejoice.",
       price: 9.99,
-      discontinued: true,
+      discontinued: false,
       categories: "c1"
     },
     {
@@ -74,7 +74,7 @@ window.products = [
       name: "Mango Cake Cup",
       description: "Cross culture of Southeast Asian flavours.",
       price: 15.99,
-      discontinued: true,
+      discontinued: false,
       categories: "c2"
     },
     {
@@ -82,7 +82,7 @@ window.products = [
       name: "Taro Custard",
       description: "Mildly sweet taro with savoury pork floss.",
       price: 12.99,
-      discontinued: true,
+      discontinued: false,
       categories: "c2"
     },
     {
@@ -104,9 +104,9 @@ window.products = [
     {
       id: "P12",
       name: "Earl Grey Cake",
-      description: "",
+      description: "Yummy indulgent favorite",
       price: 9.99,
-      discontinued: true,
+      discontinued: false,
       categories: "c3"
     },
     {
@@ -114,7 +114,7 @@ window.products = [
       name: "Chestnut Cake",
       description: "Luxurious black tea is a true classic.",
       price: 9.99,
-      discontinued: true,
+      discontinued: false,
       categories: "c3"
     },
     {
@@ -130,7 +130,7 @@ window.products = [
       name: "Mango Cake",
       description: "Fresh mangoes only.",
       price: 9.99,
-      discontinued: true,
+      discontinued: false,
       categories: "c3"
     },
     {
@@ -146,7 +146,7 @@ window.products = [
       name: "Pink Bow Birthday Cake",
       description: "A perfect birthday cake for your girl friend",
       price: 119.99,
-      discontinued: true,
+      discontinued: false,
       categories: "c4"
     },
     {
@@ -154,7 +154,7 @@ window.products = [
       name: "Elsa Birthday Bake",
       description: "For every girl who has a prince dream",
       price: 109.99,
-      discontinued: true,
+      discontinued: false,
       categories: "c4"
     },
     {
@@ -162,7 +162,7 @@ window.products = [
       name: "Car Birthday Cake",
       description: "Best gift for your boy friend's birthday.",
       price: 129.99,
-      discontinued: true,
+      discontinued: false,
       categories: "c4"
     },
     {

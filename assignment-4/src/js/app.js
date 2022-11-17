@@ -37,17 +37,33 @@ function showNavigation(){
 }
 
 //add table header
+// function addTableHeader(){
+//   const header = document.getElementsByTagName("thead")[0];
+//   header.innerHTML = "";
+//   const row = header.insertRow(0);
+//   const cell1 = row.insertCell(0);
+//   cell1.innerHTML = "<b>Name</b>";
+//   const cell2 = row.insertCell(1);
+//   cell2.innerHTML = "<b>Description</b>";
+//   const cell3 = row.insertCell(2);
+//   cell3.innerHTML = "<b>Price</b>";
+// }
+
 function addTableHeader(){
   const header = document.getElementsByTagName("thead")[0];
-  header.innerHTML = "";
-  const row = header.insertRow(0);
-  const cell1 = row.insertCell(0);
-  cell1.innerHTML = "<b>Name</b>";
-  const cell2 = row.insertCell(1);
-  cell2.innerHTML = "<b>Description</b>";
-  const cell3 = row.insertCell(2);
-  cell3.innerHTML = "<b>Price</b>";
-}
+  header.innerHTML = ""
+  const tr = document.createElement("tr");
+  const td1 = document.createElement("td");
+  td1.innerHTML = "<b>Name</b>";
+  const td2 = document.createElement("td");
+  td2.innerHTML = "<b>Description</b>";
+  const td3 = document.createElement("td");
+  td3.innerHTML = "<b>Price</b>";
+  tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    header.appendChild(tr);
+} 
 
 function addTitle(id){
   const ele = _id(id);

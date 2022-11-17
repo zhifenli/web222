@@ -2,7 +2,6 @@
  * Override any styles here that you want to change (optional)...
  */
 body{
-  background-image: url(./img/img.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -20,6 +19,9 @@ tr{
   margin: auto;
   width: 80%;
 }
+tr:hover td{
+  background-color: rgb(246, 225, 174) !important;
+}
 td{
   border: 0.2px solid rgb(208, 150, 3);
   background-color: rgb(251, 212, 218);
@@ -27,6 +29,7 @@ td{
   width: 33%;
   text-align: left;
   vertical-align: bottom;
+  color: solid rgb(208, 150, 3);
 }
 h1{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
