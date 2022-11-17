@@ -18,7 +18,7 @@ window.products = [
       name: "Earl Grey",
       description: "Luxurious black tea is a true classic.",
       price: 9.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c1"
     },
     {
@@ -26,7 +26,7 @@ window.products = [
       name: "Cheese",
       description: "Cheesy with a balance of sweetness.",
       price: 10.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c1"
     },
     {
@@ -42,7 +42,7 @@ window.products = [
       name: "Tiramisuy",
       description: "Coffee lovers rejoice.",
       price: 9.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c1"
     },
     {
@@ -58,7 +58,7 @@ window.products = [
       name: "Matcha",
       description: "Earthy, green taste and aroma.",
       price: 11.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c1"
     },
     {
@@ -66,7 +66,7 @@ window.products = [
       name: "Shredded Pork Cake Cup",
       description: "An unusual combination that’s oh-so-right.",
       price: 12.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c2"
     },
     {
@@ -74,7 +74,7 @@ window.products = [
       name: "Mango Cake Cup",
       description: "Cross culture of Southeast Asian flavours.",
       price: 15.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c2"
     },
     {
@@ -82,7 +82,7 @@ window.products = [
       name: "Taro Custard",
       description: "Mildly sweet taro with savoury pork floss.",
       price: 12.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c2"
     },
     {
@@ -98,7 +98,7 @@ window.products = [
       name: "Soya Bean Cream Cake",
       description: "Cozy and indulgent Asian flavours.",
       price: 12.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c3"
     },
     {
@@ -106,7 +106,7 @@ window.products = [
       name: "Earl Grey Cake",
       description: "",
       price: 9.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c3"
     },
     {
@@ -114,7 +114,7 @@ window.products = [
       name: "Chestnut Cake",
       description: "Luxurious black tea is a true classic.",
       price: 9.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c3"
     },
     {
@@ -122,7 +122,7 @@ window.products = [
       name: "Earl Grey",
       description: "Nutty and toasted.",
       price: 9.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c3"
     },
     {
@@ -130,7 +130,7 @@ window.products = [
       name: "Mango Cake",
       description: "Fresh mangoes only.",
       price: 9.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c3"
     },
     {
@@ -146,7 +146,7 @@ window.products = [
       name: "Pink Bow Birthday Cake",
       description: "A perfect birthday cake for your girl friend",
       price: 119.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c4"
     },
     {
@@ -154,7 +154,7 @@ window.products = [
       name: "Elsa Birthday Bake",
       description: "For every girl who has a prince dream",
       price: 109.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c4"
     },
     {
@@ -162,7 +162,7 @@ window.products = [
       name: "Car Birthday Cake",
       description: "Best gift for your boy friend's birthday.",
       price: 129.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c4"
     },
     {
@@ -170,7 +170,7 @@ window.products = [
       name: "Flower Birthday Cake",
       description: "A beautiful flower cak",
       price: 129.99,
-      discontinued: false,
+      discontinued: true,
       categories: "c4"
     }
 ];

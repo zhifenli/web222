@@ -13,13 +13,16 @@ table{
   margin: auto;
   width: 80%;
 }
+thead{
+  background-color:rgb(227, 116, 188);
+}
 tr{
   margin: auto;
   width: 80%;
 }
 td{
   border: 0.2px solid rgb(208, 150, 3);
-  background-color: rgb(253, 199, 208);
+  background-color: rgb(251, 212, 218);
   margin: auto;
   width: 33%;
   text-align: left;
@@ -41,5 +44,5 @@ header,p{
 }
 
 .nav-item {
-  color: rgb(247, 171, 221)
+  color: pink;
 }

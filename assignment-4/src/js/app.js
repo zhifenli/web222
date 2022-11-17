@@ -8,9 +8,9 @@
  *
  * Please update the following with your information:
  *
- *      Name:       <YOUR_NAME>
- *      Student ID: <YOUR_STUDENT_ID>
- *      Date:       <SUBMISSION_DATE>
+ *      Name:       Zhifen Li
+ *      Student ID: 168833218
+ *      Date:       2022-11-18
  */
 
 // All of our data is available on the global `window` object.
@@ -29,7 +29,7 @@ function showNavigation(){
   const nav = _id("category-menu");
   categories.forEach(cat => {
     const ele = document.createElement("span");
-    ele.innerHTML = cat.description;
+    ele.innerText = cat.description;
     ele.classList = "nav-item"
     ele.id = cat.id
     nav.appendChild(ele);
@@ -39,6 +39,7 @@ function showNavigation(){
 //add table header
 function addTableHeader(){
   const header = document.getElementsByTagName("thead")[0];
+  header.innerHTML = "";
   const row = header.insertRow(0);
   const cell1 = row.insertCell(0);
   cell1.innerHTML = "<b>Name</b>";
@@ -48,63 +49,53 @@ function addTableHeader(){
   cell3.innerHTML = "<b>Price</b>";
 }
 
-//add c1 title and content
-function showC1Title(){
-  const ele = document.getElementById("category");
-  ele.innerHTML = "";
-  //ele.appendChild(ele)
-  ele.innerText = categories[0].description;
-}
-function addC1Title(){
-  const ele = document.getElementById("c1");
-  ele.addEventListener("click", showC1Title);
-  ele.addEventListener("click", addTableHeader)
+function addTitle(id){
+  const ele = _id(id);
+  const categoryProducts = products.filter(product => product.categories == id && product.discontinued != true );
+  let description;
+  for(let c of categories){
+    if(c.id == id){
+       description = c.description
+    }
+  }
+  ele.addEventListener("click", () => {
+    showTitle(description);
+    addTableHeader();
+    addTable(categoryProducts);
+  });
 }
 
-const c1Products = products.filter(product => products.categories == "c1")
-function addTable1(){
-  const tbody = document.getElementById("products");
-  
-  for(let p of c1Products){
-    const content = `<tr><td>${p.name}</td> <td>${p.description}</td> <td>$${p.price}</td></tr>`
+function showTitle(description){
+  const ele = _id("category");
+  ele.innerHTML = "";
+  ele.innerText = description;
+}
+
+function addTable(productList){
+  const tbody = _id("products");
+  tbody.innerHTML = "";
+
+  for(let p of productList){
+    const tr = document.createElement("tr");
+    tr.id = p.id;
+    tr.addEventListener("click", ()=> {console.log(p.name)});
+    const td1 = document.createElement("td");
+    td1.innerText = p.name;
+
+    const td2 = document.createElement("td");
+    td2.innerText = p.description;
+
+    const td3 = document.createElement("td");
+    priceText = `$${p.price}`
+    td3.innerText = priceText; 
+
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tbody.appendChild(tr);
   }
 }
 
-
-//add c2 title and content
-function showC2Title(){
-  const ele = document.getElementById("category");
-  ele.innerHTML = "";
-  //ele.appendChild(ele)
-  ele.innerText = categories[1].description;
-}
-function addC2Title(){
-  const ele = document.getElementById("c2");
-  ele.addEventListener("click", showC2Title);
-}
-//add c3 title and content
-function showC3Title(){
-  const ele = document.getElementById("category");
-  ele.innerHTML = "";
-  //ele.appendChild(ele)
-  ele.innerText = categories[2].description;
-}
-function addC3Title(){
-  const ele = document.getElementById("c3");
-  ele.addEventListener("click", showC3Title);
-}
-
-//add c4 title and content
-function showC4Title(){
-  const ele = document.getElementById("category");
-  ele.innerHTML = "";
-  //ele.appendChild(ele)
-  ele.innerText = categories[3].description;
-}
-function addC4Title(){
-  const ele = document.getElementById("c4");
-  ele.addEventListener("click", showC4Title);
-}
 
 function main() {
   // For debugging, display all of our data in the console
@@ -114,10 +105,12 @@ function main() {
   console.log(something, "Store Data");
 
   showNavigation();
-  addC1Title();
-  addC2Title();
-  addC3Title();
-  addC4Title();
+
+  addTitle("c1");
+  addTitle("c2");
+  addTitle("c3");
+  addTitle("c4");
+
 }
 
 addEventListener("DOMContentLoaded", main);

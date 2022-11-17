@@ -12,12 +12,12 @@
     <h3>Personal Information</h3>
     <form action="https://httpbin.org/get" method="get">
       <div>
-        first name: <input name="firstName" type="text" size="15" value="hhh" >
+        first name: <input name="firstName" type="text" size="15" value="hhh"  disabled>
       </div>
 
       <div>
         What are your hobbies?
-        <input type="checkbox" name="hobbies" id="" value="sport"> Sprot
+        <input type="checkbox" name="hobbies" id="" value="sport" > Sprot
         <input type="checkbox" name="hobbies" id="" value="music"> music
       </div>
 
@@ -47,6 +47,17 @@
       </div>
       <div>
         <input type="submit" value="Go" />
+      </div>
+
+      <div>
+        <input type="button" value="Click" onclick="console.log('Hello')">
+      </div>
+
+      <div>
+        <input type="reset" value="clear">
+      </div>
+      <div>
+        <input type="text" list="">
       </div>
     </form>
   </body>
