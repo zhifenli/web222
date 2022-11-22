@@ -32,75 +32,34 @@ function showNavigation() {
   });
 }
 
-function addTableHeader() {
-  const header = document.getElementsByTagName("thead")[0];
-  header.innerText = "";
-  const tr = document.createElement("tr");
-  const td1 = document.createElement("td");
-  td1.innerHTML = "<b>Name</b>";
-  const td2 = document.createElement("td");
-  td2.innerHTML = "<b>Description</b>";
-  const td3 = document.createElement("td");
-  td3.innerHTML = "<b>Price</b>";
-  tr.appendChild(td1);
-  tr.appendChild(td2);
-  tr.appendChild(td3);
-  header.appendChild(tr);
-}
 
-function addTitle(id) {
-  const ele = _id(id);
-  const categoryProducts = products.filter(
-    (product) => product.categories === id && product.discontinued !== true
-  );
-  let description;
-  for (let c of categories) {
-    if (c.id === id) {
-      description = c.description;
-    }
-  }
-  ele.addEventListener("click", () => {
-    showTitle(description);
-    addTableHeader();
-    addTable(categoryProducts);
+function createProductCard() {
+  const container = _id("card_container");
+  products.forEach((p) => {
+    var card = document.createElement('div');
+    card.classList = "card";
+    var h = document.createElement('h3');
+    h.classList = "name-item";
+    h.innerText = p.name;
+    var img = document.createElement('img');
+    img.classList = "img-item";
+    img.src = p.imageUrl;
+    var imgDescription = document.createElement('p');
+    imgDescription.classList = "img-description";
+    imgDescription.innerText = p.description;
+    var pPrice = document.createElement('span');
+    pPrice.classList = "price-item";
+    const pStri = new Intl.NumberFormat('en-Us', { style: 'currency', currency: 'USD' }).format(p.price);
+    pPrice.innerText = pStri;
+    card.appendChild(h);
+    card.appendChild(img);
+    card.appendChild(imgDescription);
+    card.appendChild(pPrice);
+    container.appendChild(card);
   });
 }
 
-function showTitle(description) {
-  const ele = _id("category");
-  ele.innerHTML = "";
-  ele.innerText = description;
-}
 
-function addTable(productList) {
-  const tbody = _id("products");
-  tbody.innerHTML = "";
-
-  for (let p of productList) {
-    const tr = document.createElement("tr");
-    tr.id = p.id;
-    tr.addEventListener("click", () => {
-      console.log(p);
-    });
-    const td1 = document.createElement("td");
-    td1.innerText = p.name;
-
-    const td2 = document.createElement("td");
-    td2.innerText = p.description;
-
-    const td3 = document.createElement("td");
-
-    const priceStr = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(
-      p.price
-    );
-    td3.innerText = priceStr;
-
-    tr.appendChild(td1);
-    tr.appendChild(td2);
-    tr.appendChild(td3);
-    tbody.appendChild(tr);
-  }
-}
 
 function main() {
   // For debugging, display all of our data in the console
@@ -110,11 +69,7 @@ function main() {
   console.log(something, "Store Data");
 
   showNavigation();
-
-  addTitle("c1");
-  addTitle("c2");
-  addTitle("c3");
-  addTitle("c4");
+  createProductCard();
 }
 
 addEventListener("DOMContentLoaded", main);

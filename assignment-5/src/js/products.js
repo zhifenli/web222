@@ -19,7 +19,8 @@ window.products = [
     description: "Luxurious black tea is a true classic.",
     price: 9.99,
     discontinued: false,
-    categories: "c1"
+    categories: "c1",
+    imageUrl: "img/mille1.jpeg"
   },
   {
     id: "P2",
@@ -27,7 +28,8 @@ window.products = [
     description: "Cheesy with a balance of sweetness.",
     price: 10.99,
     discontinued: false,
-    categories: "c1"
+    categories: "c1",
+    imageUrl: "img/Tiramisuy_mille.jpeg"
   },
   {
     id: "P3",
@@ -35,7 +37,8 @@ window.products = [
     description: "Extra richness & creaminess of custard and burnt sugar.",
     price: 8.99,
     discontinued: false,
-    categories: "c1"
+    categories: "c1",
+    imageUrl: "img/mille1.jpeg"
   },
   {
     id: "P4",
@@ -43,7 +46,8 @@ window.products = [
     description: "Coffee lovers rejoice.",
     price: 9.99,
     discontinued: false,
-    categories: "c1"
+    categories: "c1",
+    imageUrl: "img/Tiramisuy_mille.jpeg"
   },
   {
     id: "P5",
@@ -51,7 +55,8 @@ window.products = [
     description: "Creamy and delectable.",
     price: 10.99,
     discontinued: false,
-    categories: "c1"
+    categories: "c1",
+    imageUrl: "img/Mango-Cupcakes_400x394.jpeg"
   },
   {
     id: "P6",
@@ -59,7 +64,8 @@ window.products = [
     description: "Earthy, green taste and aroma.",
     price: 11.99,
     discontinued: true,
-    categories: "c1"
+    categories: "c1",
+    imageUrl: "img/Tiramisuy_mille.jpeg"
   },
   {
     id: "P7",
@@ -67,7 +73,8 @@ window.products = [
     description: "An unusual combination that’s oh-so-right.",
     price: 12.99,
     discontinued: true,
-    categories: "c2"
+    categories: "c2",
+    imageUrl: "img/Taro-cupcake_398x409.jpeg"
   },
   {
     id: "P8",
@@ -75,7 +82,8 @@ window.products = [
     description: "Cross culture of Southeast Asian flavours.",
     price: 15.99,
     discontinued: false,
-    categories: "c2"
+    categories: "c2",
+    imageUrl: "img/Mango-Cupcakes_400x394.jpeg"
   },
   {
     id: "P9",
@@ -83,7 +91,8 @@ window.products = [
     description: "Mildly sweet taro with savoury pork floss.",
     price: 12.99,
     discontinued: false,
-    categories: "c2"
+    categories: "c2",
+    imageUrl: "img/chocolate-cupcakes.jpeg"
   },
   {
     id: "P10",
@@ -91,7 +100,8 @@ window.products = [
     description: "Chocolatey, malty, and yummy all in one.",
     price: 11.99,
     discontinued: false,
-    categories: "c2"
+    categories: "c2",
+    imageUrl: "img/Mango-Cupcakes_400x394.jpeg"
   },
   {
     id: "P11",
@@ -99,7 +109,8 @@ window.products = [
     description: "Cozy and indulgent Asian flavours.",
     price: 12.99,
     discontinued: true,
-    categories: "c3"
+    categories: "c3",
+    imageUrl: "img/cake2.jpeg"
   },
   {
     id: "P12",
@@ -107,7 +118,8 @@ window.products = [
     description: "Yummy indulgent favorite",
     price: 9.99,
     discontinued: false,
-    categories: "c3"
+    categories: "c3",
+    imageUrl: "img/birthdaycake.jpeg"
   },
   {
     id: "P13",
@@ -115,7 +127,8 @@ window.products = [
     description: "Luxurious black tea is a true classic.",
     price: 9.99,
     discontinued: false,
-    categories: "c3"
+    categories: "c3",
+    imageUrl: "img/cake1.jpeg"
   },
   {
     id: "P14",
@@ -123,7 +136,8 @@ window.products = [
     description: "Nutty and toasted.",
     price: 9.99,
     discontinued: true,
-    categories: "c3"
+    categories: "c3",
+    imageUrl: "img/birthday_1_res_400x411.jpeg"
   },
   {
     id: "P15",
@@ -131,7 +145,8 @@ window.products = [
     description: "Fresh mangoes only.",
     price: 9.99,
     discontinued: false,
-    categories: "c3"
+    categories: "c3",
+    imageUrl: "img/cake1.jpeg"
   },
   {
     id: "P16",
@@ -139,7 +154,8 @@ window.products = [
     description: "For boy's birthday",
     price: 129.99,
     discontinued: false,
-    categories: "c4"
+    categories: "c4",
+    imageUrl: "img/Rustic-Wedding-Cake-Mad-About-Cakes (1).jpg"
   },
   {
     id: "P17",
@@ -147,7 +163,8 @@ window.products = [
     description: "A perfect birthday cake for your girl friend",
     price: 119.99,
     discontinued: false,
-    categories: "c4"
+    categories: "c4",
+    imageUrl: "img/cake1.jpeg"
   },
   {
     id: "P18",
@@ -155,7 +172,8 @@ window.products = [
     description: "For every girl who has a prince dream",
     price: 109.99,
     discontinued: false,
-    categories: "c4"
+    categories: "c4",
+    imageUrl: "img/birthdaycake.jpeg"
   },
   {
     id: "P19",
@@ -163,7 +181,8 @@ window.products = [
     description: "Best gift for your boy friend's birthday.",
     price: 129.99,
     discontinued: false,
-    categories: "c4"
+    categories: "c4",
+    imageUrl: "img/Rustic-Wedding-Cake-Mad-About-Cakes (1).jpg"
   },
   {
     id: "P20",
@@ -171,6 +190,7 @@ window.products = [
     description: "A beautiful flower cak",
     price: 129.99,
     discontinued: true,
-    categories: "c4"
+    categories: "c4",
+    imageUrl: "img/birthday_1_res_400x411.jpeg"
   }
 ];
