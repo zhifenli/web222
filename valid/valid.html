@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function validateInput(){
+            var fullName = document.getElementById("id1").value.trim();
+            var error = document.getElementById('error');
+            let valid = true;
+            //validate for name
+        
+            if(fullName == ""){
+                alert("Name must be entered");
+                error.innerHTML += "You must enter a value for name";
+                valid = false;
+            }
+            else if(fullName.length>10){
+                error.innerHTML+="You name must be at most 10 characters!!!"
+                valid = false;
+            }
+            var age = document.form1.age.value.trim();
+            if(age == ""){
+                error.innerHTML+="Age is required!!!"
+                valid = false;
+            }else if(!isFinite(age)){
+                error.innerHTML += "The age must be Number!";
+                valid = false;
+            }else if(age<18 || age > 150){
+                error.innerHTML+= "The age must between 18 150"
+                valid = false;
+            }else if(parseInt(age) != age){
+                error.innerHTML += "The age must be Number!";
+                valid = false;
+            }
+
+            
+            return valid;
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Web 222</h1>
+    <h1>Week 11: Form validation</h1>
+    <form name="form1" action="https://httpbin.org/get" method="get" onsubmit="return validateInput()">
+        <fieldset>
+            <p id="error">
+
+            </p>
+        <legend>Personal information</legend>
+        <div>
+            <label for="id1">Name: </label>
+            <input type="text" id="id1" name="fullName" required placeholder=" fullName">
+        </div>
+
+        <div>
+            <label for="">Age: </label>
+           <!-- <input type="number" min="18" max="150">-->
+           <input type="text" name="age">
+        </div>
+        <div>
+            <input type="submit" value="Register">
+            <input type="reset" value="Clear">
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>

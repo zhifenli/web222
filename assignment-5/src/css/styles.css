@@ -1,0 +1,49 @@
+/**
+ * Override any styles here that you want to change (optional)...
+ */
+button {
+  background-color: rgb(248, 250, 251);
+  border-color: rgb(208, 150, 3);
+}
+table {
+  border: 1px solid rgb(208, 150, 3);
+  margin: auto;
+  width: 80%;
+}
+thead {
+  background-color: rgb(227, 116, 188);
+}
+tr {
+  margin: auto;
+  width: 80%;
+}
+tr:hover td {
+  background-color: rgb(246, 225, 174) !important;
+}
+td {
+  border: 0.2px solid rgb(208, 150, 3);
+  background-color: rgb(251, 212, 218);
+  margin: auto;
+  width: 33%;
+  text-align: left;
+  vertical-align: bottom;
+  color: solid rgb(208, 150, 3);
+}
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: pink;
+}
+header,
+p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: pink;
+}
+#category-menu {
+  border: 2px solid rgb(208, 150, 3);
+  margin: 20px;
+  padding: 20px;
+}
+
+.nav-item {
+  color: pink;
+}
