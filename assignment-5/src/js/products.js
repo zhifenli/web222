@@ -55,7 +55,7 @@ window.products = [
     description: "Creamy and delectable.",
     price: 10.99,
     discontinued: false,
-    categories: "c1",
+    categories: "c2",
     imageUrl: "img/Mango-Cupcakes_400x394.jpeg"
   },
   {
