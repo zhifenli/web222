@@ -55,46 +55,49 @@ function showTitle(description) {
   ele.innerText = description;
 }
 
-// function addGrid(productsList) {
-//   const container = _id("card_container");
-//   container.innerHTML = "";
-//   var card = createProductCard(productsList);
-//   container.appendChild(card);
-// }
-
-
-
 function createProductCard(product) {
-  var card = document.createElement('div');
-  card.classList = "card";
-  var h = document.createElement('h2');
+  const h = document.createElement('h2');
   h.classList = "name-item";
   h.innerText = product.name;
-  var img = document.createElement('img');
+
+  const img = document.createElement('img');
   img.classList = "img-item";
   img.src = product.imageUrl;
-  var imgDescription = document.createElement('p');
+  const imgDescription = document.createElement('p');
   imgDescription.classList = "img-description";
   imgDescription.innerText = product.description;
-  var pPrice = document.createElement('span');
+
+  const pPrice = document.createElement('span');
   pPrice.classList = "price-item";
   const pStri = new Intl.NumberFormat('en-Us', { style: 'currency', currency: 'USD' }).format(product.price);
   pPrice.innerText = pStri;
+
+  const card = document.createElement('div');
+  card.classList = "card";
   card.appendChild(h);
   card.appendChild(img);
   card.appendChild(imgDescription);
   card.appendChild(pPrice);
+
   return card;
 }
 
 function createProductCards(productsList) {
   const container = _id("card_container");
   container.innerHTML = "";
-  productsList.forEach((p) => {
-    console.log("###", p);
-    const cardElem = createProductCard(p);
-    container.appendChild(cardElem);
-  });
+
+  // productsList.forEach((p) => {
+  //   const cardElem = createProductCard(p);
+  //   container.appendChild(cardElem);
+  // });
+
+  productsList
+    .map(p => createProductCard(p))
+    .forEach(card => container.appendChild(card));
+
+  // productsList
+  //   .map(createProductCard)
+  //   .forEach(card => container.appendChild(card));
 }
 
 

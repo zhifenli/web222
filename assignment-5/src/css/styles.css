@@ -1,6 +1,15 @@
 /**
  * Override any styles here that you want to change (optional)...
  */
+
+div,
+h2 {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(184, 132, 0);
+  box-shadow: 3px 3px 5px rgb(250, 239, 212);
+}
+
 button {
   background-color: rgb(244, 251, 253);
   border-color: rgb(208, 150, 3);
@@ -34,7 +43,7 @@ p {
 
 .card {
   border: 2px solid rgb(208, 150, 3);
-  margin: 2px auto;
+  margin: 10px auto;
   padding: 25px;
   border-radius: 15px;
   align-content: center;
@@ -45,21 +54,12 @@ p {
   border-radius: 5px;
 }
 #card_container {
-  display: grid;
-  grid: 600px 650px / auto auto;
-  grid-gap: 10px;
-  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card_container div {
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
-}
-div,
-h2 {
-  text-align: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: rgb(184, 132, 0);
-  box-shadow: 3px 3px 5px rgb(250, 239, 212);
 }
