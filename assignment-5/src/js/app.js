@@ -35,7 +35,7 @@ function showNavigation() {
 function addTitle(id) {
   const ele = _id(id);
   const categoryProducts = products.filter(
-    (product) => product.categories === id
+    (product) => product.categories === id && product.discontinued !== true
   );
   let description;
   for (let c of categories) {
@@ -56,23 +56,25 @@ function showTitle(description) {
 }
 
 function createProductCard(product) {
-  const h = document.createElement('h2');
+  const h = document.createElement("h2");
   h.classList = "name-item";
   h.innerText = product.name;
 
-  const img = document.createElement('img');
+  const img = document.createElement("img");
   img.classList = "img-item";
   img.src = product.imageUrl;
-  const imgDescription = document.createElement('p');
+  const imgDescription = document.createElement("p");
   imgDescription.classList = "img-description";
   imgDescription.innerText = product.description;
 
-  const pPrice = document.createElement('span');
+  const pPrice = document.createElement("span");
   pPrice.classList = "price-item";
-  const pStri = new Intl.NumberFormat('en-Us', { style: 'currency', currency: 'USD' }).format(product.price);
+  const pStri = new Intl.NumberFormat("en-Us", { style: "currency", currency: "USD" }).format(
+    product.price
+  );
   pPrice.innerText = pStri;
 
-  const card = document.createElement('div');
+  const card = document.createElement("div");
   card.classList = "card";
   card.appendChild(h);
   card.appendChild(img);
@@ -86,21 +88,19 @@ function createProductCards(productsList) {
   const container = _id("card_container");
   container.innerHTML = "";
 
-  // productsList.forEach((p) => {
-  //   const cardElem = createProductCard(p);
-  //   container.appendChild(cardElem);
-  // });
-
-  productsList
-    .map(p => createProductCard(p))
-    .forEach(card => container.appendChild(card));
-
-  // productsList
-  //   .map(createProductCard)
-  //   .forEach(card => container.appendChild(card));
+  productsList.forEach((p) => {
+    const cardElem = createProductCard(p);
+    container.appendChild(cardElem);
+  });
 }
 
+// productsList
+//    .map(p => createProductCard(p))
+//    .forEach(card => container.appendChild(card));
 
+// productsList
+//   .map(createProductCard)
+//   .forEach(card => container.appendChild(card))
 
 function main() {
   // For debugging, display all of our data in the console
@@ -114,7 +114,6 @@ function main() {
   addTitle("c2");
   addTitle("c3");
   addTitle("c4");
-
 }
 
 addEventListener("DOMContentLoaded", main);

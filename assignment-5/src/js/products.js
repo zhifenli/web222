@@ -54,8 +54,8 @@ window.products = [
     name: "Oreo",
     description: "Creamy and delectable.",
     price: 10.99,
-    discontinued: false,
-    categories: "c2",
+    discontinued: true,
+    categories: "c1",
     imageUrl: "img/Mango-Cupcakes_400x394.jpeg"
   },
   {
@@ -72,7 +72,7 @@ window.products = [
     name: "Shredded Pork Cake Cup",
     description: "An unusual combination that’s oh-so-right.",
     price: 12.99,
-    discontinued: true,
+    discontinued: false,
     categories: "c2",
     imageUrl: "img/Taro-cupcake_398x409.jpeg"
   },
@@ -126,7 +126,7 @@ window.products = [
     name: "Chestnut Cake",
     description: "Luxurious black tea is a true classic.",
     price: 9.99,
-    discontinued: false,
+    discontinued: true,
     categories: "c3",
     imageUrl: "img/cake1.jpeg"
   },
@@ -135,7 +135,7 @@ window.products = [
     name: "Earl Grey",
     description: "Nutty and toasted.",
     price: 9.99,
-    discontinued: true,
+    discontinued: false,
     categories: "c3",
     imageUrl: "img/birthday_1_res_400x411.jpeg"
   },
