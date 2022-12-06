@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form id="formld" action="#" method="get">  <!-- method 1.post; 2.get;-->
+    <label for="LastName">LastName</label>
+    <input type="text" name="Lname"><br>
+    
+    <input type="text" list="subject" name="course" placeholder="Click here to select"> <br>
+    <datalist id="subject">
+        <option value="Atc100">Apc100</option>
+        <option value="Afc100">Apc100</option>
+        <option value="Apr100">Apc100</option>
+        <option value="Apo100">Apc100</option>
+        <option value="App100">Apc100</option>
+    </datalist>
+
+    <input type="text" name="username" ><br>
+    <input type="password" name="password"><br>
+    <input type="hidden" name="entry0" id="entry0" value="value from the form" />
+
+    <ul>
+        <li><input type="radio" name="paymethod" id="pay_1" value="cash" checked>Cash</li>
+        <li><input type="radio" name="paymethod" id="pay_2" value="cheque">Cheque</li>
+    </ul>
+
+    <select name="what to do" id="what-to-do">
+        <option value="1">Coffee</option>
+        <option value="2" selected>Read A Bbook</option>
+        <option value="3">Take A Walk</option>
+        <option value="4">Buy A Bagel</option>
+        <option value="5">Watch TV</option>
+        <option value="6">Write a test</option>
+
+
+    </select>
+
+
+    <input type="submit" value="Submit"><br>
+</form>
+</body>
+</html>

@@ -1,7 +1,10 @@
 /**
  * Override any styles here that you want to change (optional)...
  */
-
+body {
+  font-family: "Kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
 div,
 h2 {
   text-align: center;

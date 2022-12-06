@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#">
+      <fieldset>
+        <legend>Student Register</legend>
+        <legend>
+          <label for="name" >Name</label>
+          <input type="text" id="name" placeholder="Name"/><br />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            pattern=".+@globex\.com"
+            size="30"
+          /><br />
+          <span>What would you like: </span>
+
+          <input
+            type="radio"
+            name="jobtype"
+            id="Full-time"
+            value="Full-time"
+            checked
+          />Full-time
+          <input
+            type="radio"
+            name="jobtype"
+            id="Part-time"
+            value="Part-time"
+          />Part-time <br /><br />
+
+          <label
+            for="What would you like to study"
+            id="What-would-you-like-to-study"
+            >What would you like to study?</label
+          >
+          <br />
+          <br />
+          <select
+            name="What would you like to study"
+            id="What-would-you-like-to-study"
+            size="4"
+          >
+            <option value="1" selected>web</option>
+            <option value="2">C++</option>
+            <option value="3">JAVA</option>
+            <option value="4">Python</option>
+          </select>
+          <br>
+          <br>
+          <div>
+            Which do you prefer?<br />
+            <input type="checkbox" name="date" id="" value="Monday" /> Monday <br>
+            <input type="checkbox" name="date" id="" value="Tuesday" /> Tuesday <br>
+            <input type="checkbox" name="date" id="" value="Wednesday" />Wednesday <br>
+          </div>
+          <br>
+        </legend>
+      </fieldset>
+      <br>
+      <input type="submit" value="Submit" />
+        <input type="reset" value="Clear" />
+    </form>
+  </body>
+</html>

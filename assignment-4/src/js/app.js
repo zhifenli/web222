@@ -31,22 +31,28 @@ function showNavigation() {
     nav.appendChild(ele);
   });
 }
+// function eliheader(){
+//   const header = document.getElementsByTagName("thead")[0];
+//   header.innerHTML = "";
+// }
+// function addTableHeader() {
+  //const header = document.getElementsByTagName("thead")[0];
+  // const header = document.getElementsById("thead");
 
-function addTableHeader() {
-  const header = document.getElementsByTagName("thead")[0];
-  header.innerText = "";
-  const tr = document.createElement("tr");
-  const td1 = document.createElement("td");
-  td1.innerHTML = "<b>Name</b>";
-  const td2 = document.createElement("td");
-  td2.innerHTML = "<b>Description</b>";
-  const td3 = document.createElement("td");
-  td3.innerHTML = "<b>Price</b>";
-  tr.appendChild(td1);
-  tr.appendChild(td2);
-  tr.appendChild(td3);
-  header.appendChild(tr);
-}
+  // header.innerHTML = "header";
+  //header.innerText = "";
+  // const tr = document.createElement("tr");
+  // const td1 = document.createElement("td");
+  // td1.innerHTML = "<b>Name</b>";
+  // const td2 = document.createElement("td");
+  // td2.innerHTML = "<b>Description</b>";
+  // const td3 = document.createElement("td");
+  // td3.innerHTML = "<b>Price</b>";
+  // tr.appendChild(td1);
+  // tr.appendChild(td2);
+  // tr.appendChild(td3);
+  // header.appendChild(tr);
+// }
 
 function addTitle(id) {
   const ele = _id(id);
@@ -61,7 +67,7 @@ function addTitle(id) {
   }
   ele.addEventListener("click", () => {
     showTitle(description);
-    addTableHeader();
+    //addTableHeader();
     addTable(categoryProducts);
   });
 }
@@ -108,7 +114,7 @@ function main() {
   const something = { products: products, categories };
 
   console.log(something, "Store Data");
-
+  //eliheader();
   showNavigation();
 
   addTitle("c1");

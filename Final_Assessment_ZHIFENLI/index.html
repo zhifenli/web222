@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Kanit:wght@600;700&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Zhifen Li's Web</title>
+  </head>
+
+  <body>
+    <!-- <header></header> -->
+    <nav class="topnav" id="topnav">
+      <a class="nav-btn" href="#about"> About Me</a>
+      <a class="nav-btn" href="#education">Education </a>
+      <a class="nav-btn" href="#contact">Contact Me</a>
+      <a class="nav-btn" href="#skills">My Skills</a>
+      <a class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+    </nav>
+
+    <main>
+      <section id="about">
+        <div class="card">
+          <!-- <img src="./files/Software Engineer-ZHIFEN LI.docx" alt="Fen Li" /> -->
+          <img src="./img/Fen.jpeg" alt="Fen Li" />
+          <div class="card_container">
+            <h1><b>Zhifen Li</b></h1>
+            <p>Web Develper & Software Engineer</p>
+            <a
+              class="submit-btn"
+              href="files/Software Engineer-ZHIFEN LI.docx"
+              download
+            >
+              <i class="fa-solid fa-file-arrow-down"></i> Resume
+            </a>
+            <a class="submit-btn" href="#contact"
+              ><i class="fa-solid fa-phone-volume"></i> Contact Me</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>About Me</h2>
+        <div class="row">
+          <aside class="column1">
+            <h3>Basic Information</h3>
+            <div>
+              NAME : ZHIFEN LI <br />
+              EMAIL : fli92@myseneca.ca <br />
+              STUDENT ID: 168833218 DATE : 2022/11/29 <br />
+              COURSE : WEB 222 <br />
+              SECTION : NDD <br />
+              PROFESSOR : Muath Alzghool <br />
+            </div>
+          </aside>
+          <article class="column2">
+            <div>
+              <h3>About Me and Academic Honesty</h3>
+              <p>
+                I declare that my assessment is wholly my own work in accordance
+                with Seneca Academic Policy. No part of this assessment has been
+                copied manually or electronically from any other source
+                (including web sites) except for the information supplied by the
+                WEB222 instructors and / or made available in this assessment
+                for my use. I also declare that no part of this assignment has
+                been distributed to other students.
+              </p>
+              <b>Date: </b>Dec 7, 2022
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="row">
+          <aside class="column1">
+            <div>
+              <h5>2022 - 2024(expected)</h5>
+              <h3>Advanced Diploma</h3>
+            </div>
+          </aside>
+          <article class="column2">
+            <div>
+              <h3>Advanced Diploma</h3>
+              <h4>SENECA COLLEGE</h4>
+              <p>
+                Programming languages System methodologies Client and server
+                side development Design and maintenance of database systems Data
+                communication
+              </p>
+            </div>
+          </article>
+        </div>
+        <!-- <div class="row">
+          <aside class="column1">
+            <div>
+              <h5>2022 - 2024(expected)</h5>
+              <h3>Advanced Diploma</h3>
+            </div>
+          </aside>
+          <article class="column2">
+            <div>
+              <h3>Highschool</h3>
+              <h4>Highschool</h4>
+              <p>
+                rogramming languages System methodologies Client and server side
+                development Design and maintenance of database systems Data
+                communication
+              </p>
+            </div>
+          </article>
+        </div> -->
+      </section>
+
+      <section id="skills">
+        <h2>My Skills And Qualifications</h2>
+        <div class="row">
+          <aside class="column1">
+            <h3>Skills</h3>
+          </aside>
+          <article class="column2">
+            <div>
+              <p>
+                Languages: JavaScript, C/C++ <br />
+                Databases: MySQL, Oracle
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="row">
+          <aside class="column1">
+            <div>
+              <h3>Qualifications</h3>
+            </div>
+          </aside>
+          <article class="column2">
+            <div>
+              <p>
+                Capturing the essence of codes, ensuring clear purpose and
+                well-organized responsibilities <br />
+                Knowing what it is, and what it could better be <br />
+                Debugging end to end, identifying symptoms and causes, knowing
+                trade-offs <br />
+                Assuming ownership and responsibilities, taking on challenges
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="form-container">
+          <form
+            id="form1"
+            action="https://httpbin.org/post"
+            method="post"
+            onsubmit="return validateInput()"
+          >
+            <fieldset>
+              <legend>CONTACT ME</legend>
+              <div class="table-row">
+                <div class="col-25">
+                  <label for="name">Name </label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="name" name="name" required />
+                </div>
+              </div>
+
+              <div class="table-row">
+                <div class="col-25">
+                  <label for="email">Email Address </label>
+                </div>
+                <div class="col-75">
+                  <input type="email" id="email" name="email" />
+                </div>
+              </div>
+
+              <div class="table-row">
+                <div class="col-25">
+                  <label for="address">Street Address </label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="address" name="address" />
+                </div>
+              </div>
+
+              <div class="table-row">
+                <div class="col-25">
+                  <label for="city">City </label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="city" name="city" />
+                </div>
+              </div>
+
+              <div class="table-row">
+                <div class="col-25">
+                  <label for="province">Province </label>
+                </div>
+                <div class="col-75">
+                  <input list="provinces" name="province" id="province" />
+                  <datalist id="provinces">
+                    <option value="Alberta"></option>
+                    <option value="British Columbia"></option>
+                    <option value="Manitoba"></option>
+                    <option value="New Brunswick"></option>
+                    <option value="Newfoundland and Labrador"></option>
+                    <option value="Northwest Territories"></option>
+                    <option value="Nova Scotia"></option>
+                    <option value="Nunavut"></option>
+                    <option value="Ontario"></option>
+                    <option value="Prince Edward Island"></option>
+                    <option value="Quebec"></option>
+                    <option value="Saskatchewan"></option>
+                    <option value="Yukon"></option>
+                  </datalist>
+                </div>
+              </div>
+
+              <div class="table-row">
+                <div class="col-25">
+                  <label for="aboutWhat">What is this about </label>
+                </div>
+                <div class="col-75">
+                  <fieldset>
+                    <ul id="aboutWhat">
+                      <li>
+                        <input
+                          type="radio"
+                          name="aboutWhat"
+                          id=""
+                          value="Job Offer "
+                        />Job Offer
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          name="aboutWhat"
+                          id=""
+                          value="School "
+                        />School
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          name="aboutWhat"
+                          id="other"
+                          value="Other"
+                          onchange="handleChangeOther()"
+                        />Other
+                        <div id="other-input-container"></div>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="table-row">
+                <p id="error"></p>
+                <div class="col-25">
+                  <label for="Postal">Postal Code </label>
+                </div>
+                <div class="col-75">
+                  <input type="text" name="Postal code" id="Postal" />
+                </div>
+              </div>
+
+                <div class="table-row">
+                <div class="col-25">
+                  <label for="message">Message</label>
+                </div>
+                <div class="col-75">
+                  <textarea name="message" id="message" rows="5"></textarea>
+                </div>
+              </div>
+            </fieldset>
+            <div>
+              <button class="submit-btn" type="submit">
+                <i class="fa-regular fa-paper-plane"></i>
+                Send
+              </button>
+              <button class="submit-btn" type="reset">
+                <i class="fa-regular fa-trash-can"></i>Clear
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <article>
+        <p class="footer-p">
+          NAME : ZHIFEN LI <br />
+          EMAIL: fli92@myseneca.ca<br />
+          PHONE: 647-991-1121 <br />
+        </p>
+      </article>
+    </footer>
+    <script src="./js/valid.js"></script>
+  </body>
+</html>
